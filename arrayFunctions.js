@@ -81,3 +81,69 @@ function secondHalfOfArrayIfItIsEven(fruits) {
 function youGottaCalmDown(shout) {
   // Your code here
 }
+
+function isArrayLengthOdd(numbers) {
+  return numbers.length % 2 !== 0;
+}
+
+function isArrayLengthEven(numbers) {
+  return numbers.length % 2 === 0;
+}
+
+function addLailaToArray(instructors) {
+  return [...instructors, "Laila"];
+}
+
+function eliminateTeam(teams) {
+  return teams.pop();
+}
+
+function secondHalfOfArrayIfItIsEven(fruits) {
+  if (fruits.length % 2 !== 0) return [];
+  const halfIndex = fruits.length / 2;
+  return fruits.slice(halfIndex);
+}
+
+function youGottaCalmDown(shout) {
+  const exclamationIndex = shout.indexOf("!");
+  if (exclamationIndex === -1) return shout;
+  return shout.slice(0, exclamationIndex + 1);
+}
+
+console.log(isArrayLengthOdd([1, 2, 3]));
+console.log(isArrayLengthOdd([1, 2, 3, 4]));
+
+console.log(isArrayLengthEven([1, 2, 3]));
+console.log(isArrayLengthEven([1, 2, 3, 4]));
+
+console.log(addLailaToArray(["Mshary", "Hasan"]));
+console.log(addLailaToArray(["John"]));
+console.log(addLailaToArray([]));
+
+let teams1 = ["Brazil", "Germany", "Italy"];
+let teams2 = ["Spain"];
+let teams3 = [];
+console.log(eliminateTeam(teams1));
+console.log(teams1);
+console.log(eliminateTeam(teams2));
+console.log(teams2);
+console.log(eliminateTeam(teams3));
+console.log(teams3);
+
+console.log(secondHalfOfArrayIfItIsEven(["apple", "orange", "banana", "kiwi"]));
+console.log(
+  secondHalfOfArrayIfItIsEven([
+    "apple",
+    "orange",
+    "banana",
+    "kiwi",
+    "blueberry",
+  ])
+);
+console.log(secondHalfOfArrayIfItIsEven([]));
+console.log(secondHalfOfArrayIfItIsEven(["apple", "orange"]));
+
+console.log(youGottaCalmDown("HI!!!!!!!!!!"));
+console.log(youGottaCalmDown("Taylor Schwifting!!!!!!!!!!!"));
+console.log(youGottaCalmDown("Hellooooo"));
+console.log(youGottaCalmDown("No exclamations"));
